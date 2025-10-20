@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3b2b1a;
+  color: white;
+  padding: 10px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #c89b6d;
+}
+
+.search-container {
+  display: flex;
+  gap: 8px;
+}
+
+.search-container input {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+.search-container button {
+  background-color: #c89b6d;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #c89b6d;
+  font-weight: 600;
+}
+
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 12px 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  min-width: 160px;
+  z-index: 999;
+  text-align: left;
+}
+
+.dropdown-menu .username {
+  color: #3b2f1b;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.dropdown-menu button {
+  width: 100%;
+  background-color: #d4af37;
+  border: none;
+  color: #3b2f1b;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+  background-color: #bfa035;
+}
+
+.hero {
+  background-image: url("https://wallpaperaccess.com/full/1076692.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 80px;
+  color: white;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.hero-content h1 {
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.contact-btn {
+  background-color: #c89b6d;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.contact-btn:hover {
+  background-color: #b28358;
+}
+
+.about {
+  padding: 60px 100px;
+  background-color: #fff;
+  color: #333;
+}
+
+.about h2 {
+  text-align: left;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #3b2b1a;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.about-text {
+  flex: 2;
+  line-height: 1.8;
+}
+
+.about-images {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.about-images img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+footer {
+  background-color: #3b2b1a;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+footer a {
+  color: #fff;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #c89b6d;
+}

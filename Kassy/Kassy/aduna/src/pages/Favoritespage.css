@@ -1,0 +1,220 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafafa;
+}
+.favorites-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.favorites-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3b2f1b;
+  padding: 10px 40px;
+  color: white;
+}
+
+.logo {
+  font-weight: 700;
+  color: #d4af37;
+  font-size: 1.3rem;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu a.active {
+  color: #d4af37;
+}
+
+.menu a:hover {
+  color: #d4af37;
+}
+
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 12px 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  min-width: 160px;
+  z-index: 999;
+  text-align: left;
+}
+
+.dropdown-menu .username {
+  color: #3b2f1b;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.dropdown-menu button {
+  width: 100%;
+  background-color: #d4af37;
+  border: none;
+  color: #3b2f1b;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+  background-color: #bfa035;
+}
+
+
+.tagline {
+  text-align: center;
+  padding: 40px 0 20px 0;
+}
+
+.tagline h2 {
+  font-weight: 500;
+  line-height: 1.4;
+  color: #222;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.categories div {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.categories div:hover {
+  transform: scale(1.1);
+}
+
+.categories p {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  color: #444;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px 0 60px 0;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.info {
+  padding: 10px 0;
+}
+
+.product-name {
+  font-weight: 600;
+  color: #3b2f1b;
+}
+
+.product-price {
+  color: #000;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 15px 15px 15px;
+}
+
+.heart {
+  color: red;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.heart:hover {
+  transform: scale(1.3);
+}
+
+button {
+  background-color: #b38b2e;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #a37c29;
+  transform: scale(1.05);
+}
+
+footer {
+  margin-top: auto;
+  background-color: #3b2f1b;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}

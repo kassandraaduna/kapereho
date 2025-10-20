@@ -1,0 +1,276 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: url("https://wallpaperaccess.com/full/1076692.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: #fff;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3b2a1a; 
+  padding: 10px 40px;
+  height: 65px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #c89b6d; 
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #f6f2ef;
+  border-radius: 30px;
+  padding: 4px 10px;
+  width: 240px;
+}
+
+.search-container input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 5px 8px;
+  font-size: 0.9rem;
+  color: #333;
+  border-radius: 30px;
+}
+
+.search-container button {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #3b2a1a;
+}
+
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+  color: #c89b6d;
+}
+
+
+.menu img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #c89b6d;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 65px - 60px);
+  padding: 20px;
+}
+
+.login-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px 30px;
+  border-radius: 20px;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.login-card h2 {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: #f6f2ef;
+  color: #000;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field .toggle {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+
+.forgot-container {
+  text-align: right;
+  margin-top: -8px;
+  margin-bottom: 15px;
+}
+
+.forgot {
+  color: #c89b6d;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+
+.signin-btn {
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.signin-btn:hover {
+  background-color: #c89b6d;
+  color: #fff;
+}
+
+
+.divider {
+  margin: 15px 0;
+  font-size: 0.8rem;
+  color: #bbb;
+}
+
+
+.google-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.google-btn:hover {
+  background-color: #f3f3f3;
+}
+
+.google-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+
+.create-account {
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.create-account a {
+  color: #c89b6d;
+  text-decoration: none;
+}
+
+.create-account a:hover {
+  text-decoration: underline;
+}
+
+
+.footer {
+  background-color: #3b2a1a;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 12px;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: #c89b6d;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    padding: 15px;
+  }
+
+  .menu {
+    gap: 15px;
+  }
+
+  .login-card {
+    padding: 30px 20px;
+  }
+}

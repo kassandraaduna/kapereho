@@ -1,0 +1,152 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-size: cover;
+}
+
+.app-container {
+  background: url("https://wallpaperaccess.com/full/1076692.jpg") center center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3b2f1b;
+  padding: 10px 40px;
+  color: white;
+}
+
+.logo {
+  font-weight: 700;
+  color: #d4af37;
+  font-size: 1.3rem;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.search-container button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: #d4af37;
+}
+
+.profile-icon {
+  font-size: 1.5rem;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.form-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px 60px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  width: 350px;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+}
+
+.form-container input {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-container .toggle {
+  position: absolute;
+  right: 10px;
+  top: 30%;
+  cursor: pointer;
+}
+
+.signup-btn {
+  width: 100%;
+  background-color: #d4af37;
+  color: #3b2f1b;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.signup-btn:hover {
+  background-color: #bfa035;
+}
+
+.login-link {
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.login-link a {
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #3b2a1a;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 5px;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: #c89b6d;
+}
