@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd Kassy/Kassy/aduna && npm install && npm run build",
+  "outputDirectory": "Kassy/Kassy/aduna/build",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
