@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom"; // ← Added Link
+import { Link, useNavigate } from "react-router-dom"; 
 import "./Registerpage.css";
 
 function Registerpage() {
@@ -38,20 +38,26 @@ function Registerpage() {
 
   return (
     <div className="app-container">
-      <header className="navbar">
-        <div className="logo">KAPEREHO</div>
-        <div className="search-container">
-          <input type="text" placeholder="search" />
-          <button>🔍</button>
-        </div>
-        <nav className="menu">
-          <Link to="/home">Home</Link>
-          <a href="#">Menu</a>
-          <a href="#">Favorites</a>
-          <a href="#">Contact Us</a>
+      <header class="navbar">
+            <div className="nav-left">
+              <div className="logo">KAPEREHO</div>
+      
+              <div className="search-container">
+                <input type="text" placeholder="search" />
+                <button>🔍</button>
+              </div>
+
+              <nav className="menu">
+                <a href="#">Home</a>
+                <a href="#">Menu</a>
+                <a href="#">Favorites</a>
+                <a href="#">Contact Us</a>
         </nav>
-        <div className="profile-icon">👤</div>
-      </header>
+      
+              <div className="profile-icon">👤</div>
+            </div>
+      
+            </header>
 
       <div className="content">
         <div className="form-container">

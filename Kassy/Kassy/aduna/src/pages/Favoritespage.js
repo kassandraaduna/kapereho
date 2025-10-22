@@ -4,6 +4,7 @@ import "./Favoritespage.css";
 
 function FavoritesPage() {
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false); 
   const [favorites, setFavorites] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
 
@@ -30,64 +31,56 @@ function FavoritesPage() {
 
   return (
     <div className="favorites-page bg-gradient-to-b from-[#f5f2ed] to-[#e8e2d9] min-h-screen flex flex-col">
-      {/* Navbar */}
-      <header className="navbar flex items-center justify-between bg-[#3b2f1b] px-10 py-3 text-white shadow-md">
-        <div className="logo font-bold text-[#d4af37] text-xl tracking-wide">
-          KAPEREHO
-        </div>
-
-        <div className="search-container flex items-center bg-white rounded-full px-3 py-1">
-          <input
-            type="text"
-            placeholder="search"
-            className="border-none outline-none text-black px-2 bg-transparent"
-          />
-          <button className="text-gray-500 hover:text-[#d4af37] transition">
-            🔍
-          </button>
-        </div>
-
-        <nav className="menu flex gap-4 text-white">
-          <Link to="/home" className="hover:text-[#d4af37] transition">
-            Home
-          </Link>
-          <Link to="/menu" className="hover:text-[#d4af37] transition">
-            Menu
-          </Link>
-          <Link
-            to="/favorites"
-            className="text-[#d4af37] font-semibold border-b-2 border-[#d4af37]"
-          >
-            Favorites
-          </Link>
-          <Link to="/contact" className="hover:text-[#d4af37] transition">
-            Contact Us
-          </Link>
-        </nav>
-
-        <div className="profile-dropdown relative">
-          <div
-            className="profile-icon text-2xl cursor-pointer hover:text-[#d4af37] transition"
-            onClick={toggleDropdown}
-          >
-            👤
-          </div>
-
-          {showDropdown && (
-            <div className="dropdown-menu absolute right-0 mt-2 bg-white text-[#3b2f1b] rounded-lg shadow-lg p-3 w-40 z-50">
-              <p className="username text-sm text-center mb-2 font-medium">
-                Welcome to Kapereho!
-              </p>
-              <button
-                onClick={handleLogout}
-                className="w-full bg-[#d4af37] text-[#3b2f1b] rounded-md py-1 font-semibold hover:bg-[#bfa035] transition"
-              >
-                Logout
-              </button>
-            </div>
-          )}
-        </div>
-      </header>
+      
+      <header className="navbar flex justify-between items-center bg-[#3b2b1a] text-white px-10 py-3 sticky top-0 z-10 shadow-md">
+              <div className="nav-left">
+              <div className="logo">KAPEREHO</div>
+                   
+                           <div className="search-container">
+                             <input type="text" placeholder="search" />
+                             <button>🔍</button>
+                           </div>
+             
+                           <nav className={`menu ${menuOpen ? "open" : ""}`}>
+                             <Link to="/home" onClick={() => setMenuOpen(false)}>Home</Link>
+                             <Link to="/menu" onClick={() => setMenuOpen(false)}>Menu</Link>
+                             <Link to="/favorites" onClick={() => setMenuOpen(false)}>Favorites</Link>
+                             <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
+                           </nav>
+                   
+                           <div
+                             className={`hamburger ${menuOpen ? "active" : ""}`}
+                             onClick={() => setMenuOpen(!menuOpen)}
+                           >
+                             <span></span>
+                             <span></span>
+                             <span></span>
+                           </div>
+      
+              <div className="profile-dropdown relative">
+                <div
+                  className="profile-icon text-2xl cursor-pointer hover:text-[#c89b6d] transition"
+                  onClick={toggleDropdown}
+                >
+                  👤
+                </div>
+      
+                {showDropdown && (
+                  <div className="dropdown-menu absolute right-0 top-10 bg-white rounded-lg shadow-lg p-4 min-w-[160px]">
+                    <p className="username text-[#3b2f1b] font-semibold mb-2">
+                      Welcome to Kapereho!
+                    </p>
+                    <button
+                      onClick={handleLogout}
+                      className="w-full bg-[#d4af37] text-[#3b2f1b] font-bold py-1.5 rounded-md hover:bg-[#bfa035] transition"
+                    >
+                      Logout
+                    </button>
+                  </div>
+                )}
+              </div>
+              </div>
+            </header>
 
       {/* Tagline */}
       <div className="tagline text-center mt-12">

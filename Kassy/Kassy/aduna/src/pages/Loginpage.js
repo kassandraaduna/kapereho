@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom"; 
+import { useNavigate, Link } from "react-router-dom";
 import "./Loginpage.css";
 
 function Loginpage() {
@@ -32,29 +32,27 @@ function Loginpage() {
   };
 
   return (
-    <div className="App">
     
-      <div className="navbar">
-        <div className="logo">KAPEREHO</div>
-
-        <div className="search-container">
-          <input
-            type="text"
-            placeholder="Search"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          <button onClick={searchSite}>🔍</button>
-        </div>
-
-        <nav className="menu">
-          <Link to="/home">Home</Link>
-          <a href="#">Menu</a>
-          <a href="#">Favorites</a>
-          <a href="#">Contact Us</a>
-        </nav>
-        <div className="profile-icon">👤</div>
-      </div>
+    <div className="App">
+      <header className="navbar flex justify-between items-center bg-[#3b2b1a] text-white px-10 py-3 sticky top-0 z-10 shadow-md">
+              <div className="nav-left">
+              <div className="logo">KAPEREHO</div>
+                   
+                           <div className="search-container">
+                             <input type="text" placeholder="search" />
+                             <button>🔍</button>
+                           </div>
+             
+                           <nav className="menu">
+                             <a href="#">Home</a>
+                             <a href="#">Menu</a>
+                             <a href="#">Favorites</a>
+                             <a href="#">Contact Us</a>
+                           </nav>
+      
+              <div className="profile-icon">👤</div>
+              </div>
+            </header>
 
       <div className="login-container">
         <div className="login-card">
@@ -96,7 +94,13 @@ function Loginpage() {
             </div>
 
             <div className="forgot-container">
-              <button type="button" className="forgot" onClick={() => alert('Forgot password functionality to be implemented')}>
+              <button
+                type="button"
+                className="forgot"
+                onClick={() =>
+                  alert("Forgot password functionality to be implemented")
+                }
+              >
                 Forgot password?
               </button>
             </div>
@@ -130,10 +134,18 @@ function Loginpage() {
       </div>
 
       <footer>
-        <a href="https://facebook.com/kaperehoph" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://facebook.com/kaperehoph"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           📘 @kaperehoph
         </a>
-        <a href="https://instagram.com/kaperehoph" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://instagram.com/kaperehoph"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           📸 @kaperehoph
         </a>
       </footer>

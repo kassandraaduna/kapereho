@@ -1,267 +1,367 @@
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body, html {
+    height: 100%;
 }
 
 .App {
-  background-image: url("https://wallpaperaccess.com/full/1076692.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  color: #fff;
+    background-image: url("https://wallpaperaccess.com/full/1076692.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #3b2a1a; 
-  padding: 10px 40px;
-  height: 65px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: #3b2a1a;
+    padding: 10px 25px;
+    height: 65px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-grow: 1; 
+    max-width: 50%; 
 }
 
 .logo {
-  font-weight: 700;
-  font-size: 1.3rem;
-  color: #c89b6d; 
-  letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #c89b6d;
+    letter-spacing: 1px;
+    flex-shrink: 0;
 }
 
 .search-container {
   display: flex;
   align-items: center;
-  background-color: #f6f2ef;
-  border-radius: 30px;
-  padding: 4px 10px;
-  width: 240px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 3px 10px;
 }
 
 .search-container input {
-  flex: 1;
   border: none;
   outline: none;
-  background: transparent;
-  padding: 5px 8px;
-  font-size: 0.9rem;
-  color: #333;
-  border-radius: 30px;
+  padding: 5px;
+  border-radius: 20px;
 }
 
 .search-container button {
-  background: none;
   border: none;
-  font-size: 1.1rem;
+  background: transparent;
   cursor: pointer;
-  color: #3b2a1a;
 }
 
 
 .menu {
-  display: flex;
-  align-items: center;
-  gap: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-shrink: 0;
 }
 
 .menu a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: 0.3s;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: 0.3s;
 }
 
 .menu a:hover,
 .menu a.active {
-  color: #c89b6d;
+    color: #c89b6d;
 }
 
 
-.menu img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  border: 2px solid #c89b6d;
-  object-fit: cover;
-  cursor: pointer;
+
+.nav-right-container {
+    display: flex;
+    align-items: left;
+    gap: 30px; 
 }
 
-
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100vh - 65px - 60px);
-  padding: 20px;
+.profile-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
-.login-card {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 40px 30px;
-  border-radius: 20px;
-  max-width: 360px;
-  width: 100%;
-  text-align: center;
-  backdrop-filter: blur(5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+.hamburger {
+    display: none; 
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 }
 
-.login-card h2 {
-  font-size: 1rem;
-  margin-bottom: 25px;
-  color: #fff;
-  line-height: 1.4;
+.hamburger span {
+    width: 24px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
-.input-group {
-  margin-bottom: 15px;
-  text-align: left;
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 0.9rem;
-  color: #ddd;
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
 }
 
-input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  background-color: #f6f2ef;
-  color: #000;
-}
-
-.password-field {
-  position: relative;
-}
-
-.password-field .toggle {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  cursor: pointer;
-}
-
-
-.forgot-container {
-  text-align: right;
-  margin-top: -8px;
-  margin-bottom: 15px;
-}
-
-.forgot {
-  font-size: 0.8rem;
-  text-decoration: none;
-}
-
-.forgot:hover {
-  text-decoration: underline;
-}
-
-
-.signin-btn {
-  width: 100%;
-  background-color: #fff;
-  color: #000;
-  border: none;
-  padding: 10px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.signin-btn:hover {
-  background-color: #000000;
-  color: #fff;
-}
-
-
-.divider {
-  margin: 15px 0;
-  font-size: 0.8rem;
-  color: #bbb;
-}
-
-
-.google-btn {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #000;
-  gap: 8px;
-  background-color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.google-btn:hover {
-  background-color: #000000;
-  color: #fff;
-}
-
-.google-btn img {
-  width: 20px;
-  height: 20px;
-}
-
-
-.create-account {
-  font-size: 0.9rem;
-  margin-top: 10px;
-}
-
-.create-account a {
-  color: #c89b6d;
-  text-decoration: none;
-}
-
-.create-account a:hover {
-  text-decoration: underline;
-}
-
-
-footer {
-  margin-top: auto;
-  background-color: #3b2f1b;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
-    height: auto;
-    padding: 15px;
-  }
+    .navbar {
+        padding: 10px 20px;
+    }
+    
+    .menu {
+        display: flex; 
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 70%;
+        background-color: #3b2a1a;
+        padding-top: 50px;
+        gap: 20px;
+        align-items: center;
+        transition: left 0.3s ease-in-out;
+        z-index: 999;
+    }
 
-  .menu {
-    gap: 15px;
-  }
+    .menu.open {
+        left: 0;
+    }
 
-  .login-card {
-    padding: 30px 20px;
-  }
+    .menu a {
+        font-size: 1.1rem;
+    }
+    
+    .nav-left {
+        gap: 10px;
+        max-width: 80%; 
+        flex-grow: 1;
+        justify-content: flex-start;
+    }
+    
+    .logo {
+        font-size: 1.2rem; 
+    }
+
+    .search-container {
+        width: auto;
+        flex-grow: auto; 
+        max-width: 100%;
+    }
+
+    .search-container input {
+        padding: 5px; 
+        font-size: 0.8rem; 
+    }
+
+    .nav-right-icons {
+        display: flex; 
+        order: 3; 
+        gap: 15px; 
+    }
+
+    .hamburger {
+        display: flex;
+        order: 1; 
+    }
+
+    .profile-icon {
+        display: block; 
+        font-size: 1.3rem;
+        order: 2; 
+    }
+    
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 65px - 60px);
+    padding: 20px;
+}
+
+.login-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px 30px;
+    border-radius: 20px;
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.login-card h2 {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    color: #fff;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #f6f2ef;
+    color: #000;
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-field .toggle {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.signin-btn {
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.signin-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.forgot-container {
+    text-align: right;
+    margin-top: -8px;
+    margin-bottom: 15px;
+}
+
+.forgot {
+    font-size: 0.8rem;
+    text-decoration: none;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    margin: 15px 0;
+    font-size: 0.8rem;
+    color: #bbb;
+}
+
+.google-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    gap: 8px;
+    background-color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.google-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.google-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.create-account {
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.create-account a {
+    color: #c89b6d;
+    text-decoration: none;
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    margin-top: auto;
+    background-color: #3b2f1b;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer a {
+    color: #c89b6d;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
 }

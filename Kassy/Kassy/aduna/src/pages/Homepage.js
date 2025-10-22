@@ -4,6 +4,7 @@ import "./Homepage.css";
 
 function Homepage() {
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
 
   const toggleDropdown = () => setShowDropdown(!showDropdown);
@@ -17,25 +18,29 @@ function Homepage() {
     <div className="home-container font-[Poppins]">
 
       <header className="navbar flex justify-between items-center bg-[#3b2b1a] text-white px-10 py-3 sticky top-0 z-10 shadow-md">
-        <div className="logo text-[#c89b6d] font-bold text-xl tracking-wide">KAPEREHO</div>
-
-        <div className="search-container flex gap-2 bg-white rounded-full px-3 py-1">
-          <input
-            type="text"
-            placeholder="search"
-            className="border-none outline-none px-2 text-gray-700 placeholder-gray-500"
-          />
-          <button className="bg-[#c89b6d] text-white px-3 py-1 rounded-full hover:bg-[#b28358] transition">
-            🔍
-          </button>
-        </div>
-
-        <nav className="menu flex gap-6 text-base font-medium">
-          <Link to="/home" className="hover:text-[#c89b6d] transition">Home</Link>
-          <Link to="/menu" className="hover:text-[#c89b6d] transition">Menu</Link>
-          <Link to="/favorites" className="hover:text-[#c89b6d] transition">Favorites</Link>
-          <Link to="/contact" className="hover:text-[#c89b6d] transition">Contact Us</Link>
-        </nav>
+        <div className="nav-left">
+        <div className="logo">KAPEREHO</div>
+             
+                     <div className="search-container">
+                       <input type="text" placeholder="search" />
+                       <button>🔍</button>
+                     </div>
+       
+                     <nav className={`menu ${menuOpen ? "open" : ""}`}>
+                       <Link to="/home" onClick={() => setMenuOpen(false)}>Home</Link>
+                       <Link to="/menu" onClick={() => setMenuOpen(false)}>Menu</Link>
+                       <Link to="/favorites" onClick={() => setMenuOpen(false)}>Favorites</Link>
+                       <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
+                     </nav>
+             
+                     <div
+                       className={`hamburger ${menuOpen ? "active" : ""}`}
+                       onClick={() => setMenuOpen(!menuOpen)}
+                     >
+                       <span></span>
+                       <span></span>
+                       <span></span>
+                     </div>
 
         <div className="profile-dropdown relative">
           <div
@@ -58,6 +63,7 @@ function Homepage() {
               </button>
             </div>
           )}
+        </div>
         </div>
       </header>
 
